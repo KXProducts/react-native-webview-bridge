@@ -173,7 +173,7 @@ var WebViewBridge = createReactClass({
   sendToBridge: function (message: string) {
     UIManager.dispatchViewManagerCommand(
       this.getWebViewBridgeHandle(),
-      UIManager.RCTWebViewBridge.Commands.sendToBridge,
+      UIManager.getViewManagerConfig('RCTWebViewBridge').Commands.sendToBridge,
       [message]
     );
   },
